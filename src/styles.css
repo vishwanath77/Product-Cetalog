@@ -10,6 +10,10 @@ body {
   gap: 10px;
 }
 
+.container h1 {
+  color: rgb(88, 4, 32);
+  text-align: center;
+}
 .card {
   background: white;
   padding: 10px;
@@ -36,7 +40,7 @@ body {
 
 /* Card styling */
 .detail-card {
-  background: white;
+  background: rgba(255, 255, 255, 0.082);
   padding: 20px;
   border-radius: 12px;
   width: 350px;

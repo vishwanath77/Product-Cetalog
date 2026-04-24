@@ -9,14 +9,20 @@ export default function Detail() {
   if (!item) return <p>Item not found</p>
 
   return (
-    <div className="container">
-      <h1>{item.itemname}</h1>
-      <p><b>Category:</b> {item.category}</p>
-      <img src={item.image} className="detail-img"/>
-      <div>
-        {item.itemprops.map((prop, i) => (
-          <p key={i}><b>{prop.label}:</b> {prop.value}</p>
-        ))}
+    <div className="detail-container">
+      <div className="detail-card">
+        <h1>{item.itemname}</h1>
+        <p><b>Category:</b> {item.category}</p>
+
+        <img src={item.image} className="detail-img" />
+
+        <div className="props">
+          {item.itemprops.map((prop, i) => (
+            <p key={i}>
+              <b>{prop.label}:</b> {prop.value}
+            </p>
+          ))}
+        </div>
       </div>
     </div>
   )
